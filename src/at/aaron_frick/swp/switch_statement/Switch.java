@@ -1,3 +1,5 @@
+package at.aaron_frick.swp.switch_statement;
+
 import java.util.Random;
 
 public class Switch {

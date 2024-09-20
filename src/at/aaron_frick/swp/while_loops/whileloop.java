@@ -1,3 +1,5 @@
+package at.aaron_frick.swp.while_loops;
+
 import java.util.Random;
 
 public class whileloop {

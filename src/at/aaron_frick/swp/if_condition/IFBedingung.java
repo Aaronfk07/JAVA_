@@ -1,6 +1,4 @@
-
-
-
+package at.aaron_frick.swp.if_condition;
 
 
 import java.util.Random;

@@ -1,3 +1,5 @@
+package at.aaron_frick.swp.forloops;
+
 // Zähle in einem For-Loop die Zahlen von 1 bis 100 (inklusive) zusammen
 public class Forloop {
     public static void main(String[] args) {
