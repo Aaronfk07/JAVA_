@@ -4,11 +4,14 @@ public class Forloop {
 
         for (int i = 0; i < 10; i++) {
             System.out.println("Hello" + i);
-
-            for (int j = 0; j < 101; j++) {
+        }
+            for (int j = 0; j <= 100; j++) {
                 System.out.println(j);
 
-            }
+
+                }
+
         }
     }
-}
+
+// Zähle die geraden Ziffern zwischen 1 und 1000 zusammen - Tip: Starte den Loop bei 2 und erhöhe den Zählindex jeweils um 2.
