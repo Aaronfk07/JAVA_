@@ -25,6 +25,6 @@ public class Switch {
                 System.out.println("Five");
                 break;
         }
-            Start
+
     }
 }
