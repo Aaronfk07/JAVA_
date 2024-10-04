@@ -11,7 +11,7 @@ public class whileloop1 {
         int count = 0;
 
         while (!isFinished){
-            int randomNumber = random.nextInt(31 - 11) + 11;
+            int randomNumber = random.nextInt(20) + 11;
 
             count += randomNumber;
 
