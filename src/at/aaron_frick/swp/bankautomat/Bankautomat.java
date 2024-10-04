@@ -14,7 +14,7 @@ public class Bankautomat {
         boolean resume = true;
 
         while (resume) {
-            System.out.println("Willkommen beim at.aaron_frick.swp.bankautomat.Bankautomat!");
+            System.out.println("Willkommen beim Bankautomat!");
             System.out.println("Bitte wählen sie eine Option!");
             System.out.println("1. Einzahlen");
             System.out.println("2. Abheben");
@@ -75,3 +75,4 @@ public class Bankautomat {
         System.out.println("Ihr kontostand beträgt: " + kontostand + "€");
     }
  }
+
