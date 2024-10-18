@@ -28,13 +28,13 @@ public class Ceaser_Verschluesselung {
                 String inputToEncrypt = scanner.nextLine();
                 String encryptedText = encrypt(inputToEncrypt);
 
-
                 System.out.println("Verschlüsselter Text: " + encryptedText);
             } else if (selection == 2) {
                 System.out.println("Geben Sie den Text ein, den Sie entschlüsseln wollen");
-                //String inputToDecrypt = scanner.nextLine();
-                //String decryptedText = decrypt(inputToDecrypt);
-                //System.out.println("Entschlüsselter Text: " + decryptedText);
+
+                  String inputToDecrypt = scanner.nextLine();
+                  String decryptedText = decrypt(inputToDecrypt);
+                System.out.println("Entschlüsselter Text: " + decryptedText);
             } else if (selection == 3) {
                 System.out.println("Programm wird beendet");
                 running = false;
@@ -72,13 +72,38 @@ public class Ceaser_Verschluesselung {
 
 
         }
-        return result.toString();
 
-        //public static void decrypt (String input){
-           // StringBuilder result1 = new StringBuilder();
+        return result.toString();
+    }
+public static String decrypt(String input){
+           StringBuilder result = new StringBuilder();
+
+            for (int i = 0; i <input.length(); i++) {
+                char ch = input.charAt(i);
+
+                if(Character.isLetter(ch)){
+                    char shifted = (char) (ch - SHIFT);
+
+
+                    if(Character.isLowerCase(ch)){
+                        if(shifted < 'a') {
+                            shifted = (char) (shifted +26);
+                        }
+                    } else if(Character.isUpperCase(ch)) {
+                        if(shifted < 'A') {
+                            shifted = (char) (shifted + 26);
+                        }
+                    }
+                    result.append(shifted);
+                } else {
+                    result.append(ch);
+                }
+            }
+                return  result.toString();
+            }
         }
 
 
-    }
+
 
 
