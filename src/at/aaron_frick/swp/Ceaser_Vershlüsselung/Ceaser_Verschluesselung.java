@@ -1,4 +1,4 @@
-package at.aaron_frick.swp.String;
+package at.aaron_frick.swp.Ceaser_Vershlüsselung;
 
 import java.util.Scanner;
 
