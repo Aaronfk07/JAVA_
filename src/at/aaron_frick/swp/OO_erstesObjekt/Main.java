@@ -21,5 +21,13 @@ public class Main {
         System.out.println(c2.fuelAmount);
         c2.drive();
         System.out.println(c2.fuelAmount);
+
+        c2.breaking();
+
+        c2.turboboost();
+
+        c1.honk(2);
+
+        c1.getRemainingRange();
     }
 }
