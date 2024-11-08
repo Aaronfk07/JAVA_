@@ -5,29 +5,35 @@ public class Main {
         int a = 7;
 
 
-        Car c1 = new Car();
-        c1.fuelConsumption = 7;
-        c1.brand = "Audi";
-        c1.serialNumber = "A1234B";
-        c1.fuelAmount = 70;
+        Car c1 = new Car(10,"Opel","O9876M",34);
+        Car c2 = c1;
+        System.out.println(c1.getBrand());
+        c1.setBrand("Mercedes");
 
-        Car c2 = new Car();
-        c2.fuelConsumption = 9;
-        c2.brand = "BMW";
-        c2.serialNumber = "B2345B";
-        c2.fuelAmount = 45;
+        System.out.println(c1.getBrand());
 
 
-        System.out.println(c2.fuelAmount);
-        c2.drive();
-        System.out.println(c2.fuelAmount);
 
-        c2.breaking();
+//
+//        Car c2 = new Car();
+//        c2.fuelConsumption = 9;
+//        c2.brand = "BMW";
+//        c2.serialNumber = "B2345B";
+//        c2.fuelAmount = 45;
 
-        c2.turboboost();
+        Car c3 = new Car(10,"merdes", "M3256",34);
 
-        c1.honk(2);
 
-        c1.getRemainingRange();
+        System.out.println(c3.getFuelAmount());
+        c3.drive();
+        System.out.println(c3.getFuelAmount());
+
+        c3.breaking();
+
+        c3.turboboost();
+
+        c3.honk(2);
+
+        c3.getRemainingRange();
     }
 }

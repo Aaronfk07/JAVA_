@@ -1,12 +1,20 @@
 package at.aaron_frick.swp.OO_erstesObjekt;
 
 public class Car {
-    public int fuelConsumption;
-    public String brand;
-    public String serialNumber;
-    public int fuelAmount;
+    private int fuelConsumption;
+    private String brand;
+    private String serialNumber;
+    private int fuelAmount;
     private String color;
-    //public int amountOfRepetitions;
+
+    public Car(int fc, String brand, String sn,int fuelAmount){
+        this.fuelConsumption = fc;
+        this.brand = brand;
+        this.serialNumber = sn;
+        this.fuelAmount = fuelAmount;
+    }
+
+
 
     public void drive() {
         this.fuelAmount = this.fuelAmount - fuelConsumption;
@@ -40,5 +48,46 @@ public class Car {
             System.out.println(0 + "km");
         }
     }
+
+    public void setFuelAmount(int fuelAmount) {
+        this.fuelAmount = fuelAmount;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setFuelConsumption(int fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+    }
+
+    public int getFuelAmount() {
+        return fuelAmount;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public int getFuelConsumption() {
+        return fuelConsumption;
+    }
+
+    public String getSerialNumber() {
+        return serialNumber;
+    }
+
+    public String getColor() {
+        return color;
+    }
 }
+
 
