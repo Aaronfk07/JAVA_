@@ -1,22 +1,27 @@
 package at.aaron_frick.swp.OO_erstesObjekt;
 
 public class Car {
+    private Engine engine;
     private int fuelConsumption;
     private String brand;
     private String serialNumber;
     private int fuelAmount;
     private String color;
 
-    public Car(int fc, String brand, String sn) {
+    public Car(Engine engine, int fc, String brand, String sn) {
+        this.engine = engine;
         this.fuelConsumption = fc;
         this.brand = brand;
         this.serialNumber = sn;
         this.fuelAmount = 0;
     }
 
-    public Car(int fc, String brand, String sn, int fuelAmount) {
-        this(fc, brand, sn);
-        this.fuelAmount = fuelAmount;
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
     }
 
     public void drive() {
@@ -91,5 +96,4 @@ public class Car {
         return color;
     }
 }
-
 
