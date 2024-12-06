@@ -7,14 +7,17 @@ public class Car {
     private int fuelAmount;
     private String color;
 
-    public Car(int fc, String brand, String sn,int fuelAmount){
+    public Car(int fc, String brand, String sn) {
         this.fuelConsumption = fc;
         this.brand = brand;
         this.serialNumber = sn;
-        this.fuelAmount = fuelAmount;
+        this.fuelAmount = 0;
     }
 
-
+    public Car(int fc, String brand, String sn, int fuelAmount) {
+        this(fc, brand, sn);
+        this.fuelAmount = fuelAmount;
+    }
 
     public void drive() {
         this.fuelAmount = this.fuelAmount - fuelConsumption;
@@ -37,13 +40,12 @@ public class Car {
     public void honk(int amountOfRepetitions) {
         for (int i = 0; i < amountOfRepetitions; i++) {
             System.out.println("Tuuut");
-
         }
     }
 
-    public void getRemainingRange(){
-        if(fuelConsumption > 0){
-            System.out.println( (fuelAmount/fuelConsumption)*100 + "km");
+    public void getRemainingRange() {
+        if (fuelConsumption > 0) {
+            System.out.println((fuelAmount / fuelConsumption) * 100 + "km");
         } else {
             System.out.println(0 + "km");
         }
@@ -87,7 +89,6 @@ public class Car {
 
     public String getColor() {
         return color;
-
     }
 }
 
