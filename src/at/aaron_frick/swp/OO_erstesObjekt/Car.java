@@ -1,19 +1,30 @@
 package at.aaron_frick.swp.OO_erstesObjekt;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Car {
+   private List<RearMirror> mirrors;
     private Engine engine;
     private int fuelConsumption;
     private String brand;
     private String serialNumber;
     private int fuelAmount;
     private String color;
+    private Tires tires;
 
-    public Car(Engine engine, int fc, String brand, String sn) {
+    public Car(Tires tires,Engine  engine, int fuelConsumption, String brand, String serialNumber) {
+        this.tires = tires;
         this.engine = engine;
-        this.fuelConsumption = fc;
+        this.fuelConsumption = fuelConsumption;
         this.brand = brand;
-        this.serialNumber = sn;
+        this.serialNumber = serialNumber;
         this.fuelAmount = 300;
+        this.mirrors = new ArrayList<>();
+    }
+
+    public List<RearMirror> getMirrors() {
+        return mirrors;
     }
 
     public Engine getEngine() {
@@ -25,30 +36,31 @@ public class Car {
     }
 
     public void drive(int speed) {
-        if(speed < 1 || speed > 1000){
-            System.out.println("Geschwindigkeit muss zwischen 1 und 100 liegen");
+        if (speed < 1 || speed > 1000) {
+            System.out.println("Geschwindigkeit muss zwischen 1 und 1000 liegen");
+            return;
         }
-        if(fuelAmount <= 0) {
+        if (fuelAmount <= 0) {
             System.out.println("tank ist leer! Bitte Tanken.");
+            return;
         }
 
-        int fuelConsumption = speed /getFuelConsumption();
-        if(fuelAmount >= fuelConsumption) {
-           fuelAmount -= fuelConsumption;
+        int fuelConsumptionForDrive = speed / getFuelConsumption();
+        if (fuelAmount >= fuelConsumptionForDrive) {
+            fuelAmount -= fuelConsumptionForDrive;
             System.out.println("Das Auto fährt mit Geschwindigkeit " + speed);
-            System.out.println("Verbrauch: " + fuelConsumption + " Liter. Verbleibender Tank: " + fuelAmount);
+            System.out.println("Verbrauch: " + fuelConsumptionForDrive + " Liter. Verbleibender Tank: " + fuelAmount);
         } else {
-            System.out.println("nicht genung Treibstoff für diese Geschwindigkeit");
+            System.out.println("nicht genug Treibstoff für diese Geschwindigkeit");
         }
     }
 
     public void breaking() {
-        String breaks = "ich bremse";
-        System.out.println(breaks);
+        System.out.println("ich bremse");
     }
 
     public void turboboost() {
-        if (this.fuelAmount > fuelAmount * 0.1) {
+        if (fuelAmount > fuelAmount * 0.1) {
             System.out.println("Superturboboostmode");
         } else {
             System.out.println("not enough fuel");
@@ -65,7 +77,7 @@ public class Car {
         if (fuelConsumption > 0) {
             System.out.println((fuelAmount / fuelConsumption) * 100 + "km");
         } else {
-            System.out.println(0 + "km");
+            System.out.println("0km");
         }
     }
 
@@ -108,5 +120,8 @@ public class Car {
     public String getColor() {
         return color;
     }
-}
 
+    public void addMirror(RearMirror rearMirror){
+        this.mirrors.add(rearMirror);
+    }
+}

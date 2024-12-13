@@ -3,25 +3,24 @@ package at.aaron_frick.swp.OO_erstesObjekt;
 public class Engine {
     public enum TYPE {DIESEL, GAS}
 
-    ;
     private int horsepower;
     private TYPE type;
     private int tank;
     private int motorpower;
 
-    public Engine(int horsepower, TYPE type, int tank,int motorpower) {
+    public Engine(int horsepower, TYPE type, int tank, int motorpower) {
         this.horsepower = horsepower;
         this.type = type;
         this.tank = tank;
         this.motorpower = motorpower;
     }
 
-    public void setmotorpower(int power) {
-        if(power > 1 || power < 100){
-            System.out.println("Motorleistung ist " + motorpower);
+    public void setMotorpower(int power) {
+        if (power < 1 || power > 100) {
+            System.out.println("Motorleistung muss zwischen 1 und 100 sein");
         } else {
             this.motorpower = power;
-            System.out.println("Motorleistung muss zwischen 1 und 100 sein");
+            System.out.println("Motorleistung ist " + motorpower);
         }
     }
 
