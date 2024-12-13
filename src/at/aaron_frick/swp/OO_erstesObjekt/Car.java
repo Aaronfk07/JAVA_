@@ -24,9 +24,9 @@ public class Car {
         this.engine = engine;
     }
 
-    public void drive() {
+    public void drive(int speed) {
         this.fuelAmount = this.fuelAmount - fuelConsumption;
-        System.out.println("I am Driving");
+        System.out.println("I am Driving with speed: " + this.engine.getMotorpower());
     }
 
     public void breaking() {
