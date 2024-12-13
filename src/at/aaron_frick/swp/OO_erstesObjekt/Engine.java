@@ -18,9 +18,9 @@ public class Engine {
 
     public void setmotorpower(int power) {
         if(power > 1 || power < 100){
-           this.motorpower = power;
             System.out.println("Motorleistung ist " + motorpower);
         } else {
+            this.motorpower = power;
             System.out.println("Motorleistung muss zwischen 1 und 100 sein");
         }
     }

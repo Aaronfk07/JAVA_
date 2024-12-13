@@ -13,7 +13,7 @@ public class Car {
         this.fuelConsumption = fc;
         this.brand = brand;
         this.serialNumber = sn;
-        this.fuelAmount = 0;
+        this.fuelAmount = 300;
     }
 
     public Engine getEngine() {
@@ -25,8 +25,21 @@ public class Car {
     }
 
     public void drive(int speed) {
-        this.fuelAmount = this.fuelAmount - fuelConsumption;
-        System.out.println("I am Driving with speed: " + this.engine.getMotorpower());
+        if(speed < 1 || speed > 1000){
+            System.out.println("Geschwindigkeit muss zwischen 1 und 100 liegen");
+        }
+        if(fuelAmount <= 0) {
+            System.out.println("tank ist leer! Bitte Tanken.");
+        }
+
+        int fuelConsumption = speed /getFuelConsumption();
+        if(fuelAmount >= fuelConsumption) {
+           fuelAmount -= fuelConsumption;
+            System.out.println("Das Auto fährt mit Geschwindigkeit " + speed);
+            System.out.println("Verbrauch: " + fuelConsumption + " Liter. Verbleibender Tank: " + fuelAmount);
+        } else {
+            System.out.println("nicht genung Treibstoff für diese Geschwindigkeit");
+        }
     }
 
     public void breaking() {

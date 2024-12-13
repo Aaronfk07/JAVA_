@@ -6,7 +6,14 @@ public class Main {
 
         Car c1 = new Car(e1, 10,"Opel", "121ax");
         c1.setBrand("Mercedes");
-        c1.drive(e1.getMotorpower());
+        //.drive(e1.getMotorpower());
+
+        c1.drive(30);
+        c1.drive(100);
+        c1.drive(1000);
+        c1.drive(1000);
+        c1.drive(1000);
+
 
     }
 }
