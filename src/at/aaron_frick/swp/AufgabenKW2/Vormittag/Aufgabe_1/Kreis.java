@@ -1,4 +1,4 @@
-package at.aaron_frick.swp.AufgabeKW2;
+package at.aaron_frick.swp.AufgabenKW2.Vormittag.Aufgabe_1;
 
 public class Kreis extends Figuren {
     protected double radius = 50.0;

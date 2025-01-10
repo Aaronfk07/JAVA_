@@ -1,6 +1,6 @@
-package at.aaron_frick.swp.AufgabeKW2.Aufgabe_2;
+package at.aaron_frick.swp.AufgabenKW2.Nachmittag.Aufgabe_1;
 
-public class Circle extends Shape{
+public class Circle extends Shape {
 
     private double Radius;
 
