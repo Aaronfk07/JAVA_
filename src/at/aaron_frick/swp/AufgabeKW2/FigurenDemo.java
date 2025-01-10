@@ -6,9 +6,9 @@ import at.aaron_frick.swp.AufgabeKW2.Kreis;
 
 class FigurenDemo {
     public static void main(String[] args) {
-        Figuren fig = new Figuren(50.0, 50.0);
-        System.out.println();
-        Kreis krs = new Kreis(10.0, 10.0, 5.0);
+        Kreis k1 = new Kreis(50.0, 50.0, 30.0);
+        System.out.println("Abstand von (100, 100): " + k1.abstand(100.0, 100.0));
+
     }
 }
 
