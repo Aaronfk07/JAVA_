@@ -18,6 +18,6 @@ public class sitz {
     }
     @Override
     public String toString() {
-        return farbe +(hatGurt ? "mit Gurt": "ohne Gurt")
+        return farbe +(hatGurt ? "mit Gurt": "ohne Gurt");
     }
 }

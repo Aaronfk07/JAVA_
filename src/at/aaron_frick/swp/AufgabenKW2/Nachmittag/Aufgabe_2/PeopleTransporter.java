@@ -17,7 +17,6 @@ public class PeopleTransporter {
 
         }
 
-        public int getSitze()
 
     }
 
