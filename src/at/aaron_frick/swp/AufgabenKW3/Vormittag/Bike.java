@@ -10,12 +10,9 @@ public class Bike {
         this.wheels = wheels;
         this.color = color;
         this.brand = brand;
-
     }
 
     public void drive(){
         System.out.println("Iam Driving" + brand );
     }
-
-
 }
