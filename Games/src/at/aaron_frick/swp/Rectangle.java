@@ -7,6 +7,8 @@ public class Rectangle extends BasicGame {
 
     private float x;
     private float y;
+    private float speed;
+
     public Rectangle(String title) {
         super(title);
     }
@@ -15,12 +17,15 @@ public class Rectangle extends BasicGame {
     public void init(GameContainer gameContainer) throws SlickException {
     this.x = 100;
     this.y = 100;
+    this.speed = 25.0f;
     }
 
     @Override
-    public void update(GameContainer gameContainer, int i) throws SlickException {
-    this.x += 0.1F;
-    this.y += 0.1F;
+    public void update(GameContainer gameContainer, int delta) throws SlickException {
+        this.x += (float) delta /this.speed;
+        this.y += (float) delta /this.speed;
+//    this.x += 0.1F;
+//    this.y += 0.1F;
 
         if(this.x>700 && this.y>500){
         this.x = 0;
