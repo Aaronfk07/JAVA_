@@ -39,8 +39,8 @@ public class Lists extends BasicGame {
             rectangles.add(rectangle);
         }
         for (int i = 0; i < 50; i++) {
-            Circle circle = new Circle(random.nextInt(500), random.nextInt(500), random.nextInt(50), random.nextInt(100));
-            circles.add(circle);
+            Circle circle = new Circle();
+            this.circles.add(circle);
         }
 
     }

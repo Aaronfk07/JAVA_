@@ -11,10 +11,10 @@ public class Circle {
     private float speed;
     private float diameter;
 
-    public Circle(int x, int y, float speed, float diameter) {
+    public Circle() {
         Random random = new Random();
         this.x = random.nextInt(600);
-        this.y = random.nextInt(600);
+        this.y = random.nextInt(300);
         this.speed = random.nextInt(2);
         this.diameter = random.nextInt(100);
     }
@@ -25,9 +25,10 @@ public class Circle {
     }
 
     public void update(int delta) {
-        this.x += 10;
-        if (this.x < 800) {
-            this.x = 0;
+        this.y += speed * delta;
+        if (this.y >= 400) {
+            this.y = 0;
+
 
         }
     }
