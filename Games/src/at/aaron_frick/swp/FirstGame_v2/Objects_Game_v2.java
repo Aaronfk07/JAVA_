@@ -2,7 +2,9 @@ package at.aaron_frick.swp.FirstGame_v2;
 
 import org.newdawn.slick.*;
 
+
 public class Objects_Game_v2 extends BasicGame {
+
     private Rectangle rectangle;
     private Circle circle;
     private Oval oval;
