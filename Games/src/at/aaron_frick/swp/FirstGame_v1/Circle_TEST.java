@@ -1,8 +1,8 @@
-package at.aaron_frick.swp;
+package at.aaron_frick.swp.FirstGame_v1;
 
 import org.newdawn.slick.*;
 
-public class Circle extends BasicGame {
+public class Circle_TEST extends BasicGame {
 
     private float CircleWidth;
     private float CircleLength;
@@ -16,7 +16,7 @@ public class Circle extends BasicGame {
     private static final int UP = 3;
 
 
-    public Circle(String title) {
+    public Circle_TEST(String title) {
         super(title);
         this.direction = DOWN; // Start moving to the right
     }
@@ -60,7 +60,7 @@ public class Circle extends BasicGame {
 
     public static void main(String[] args) {
         try {
-            AppGameContainer container = new AppGameContainer(new Circle("Circle"));
+            AppGameContainer container = new AppGameContainer(new Circle_TEST("Circle"));
             container.setDisplayMode(800, 600, false);
             container.start();
         } catch (SlickException e) {
