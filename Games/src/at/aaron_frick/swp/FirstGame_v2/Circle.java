@@ -8,14 +8,18 @@ public class Circle {
     private float x;
     private float y;
     private float speed;
-    public Circle(int x, int y, float speed) {
+
+    private float diameter;
+
+    public Circle(int x, int y, float speed, float diameter) {
         this.x = 0;
         this.y = 100;
         this.speed = 1f;
+        this.diameter = 100;
     }
 
     public void render(Graphics graphics) {
-        graphics.drawOval(this.x, this.y, 100, 100);
+        graphics.drawOval(this.x, this.y, this.diameter, this.diameter);
 
     }
 

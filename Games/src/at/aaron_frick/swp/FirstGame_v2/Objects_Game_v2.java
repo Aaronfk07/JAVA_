@@ -17,7 +17,7 @@ public class Objects_Game_v2 extends BasicGame {
     @Override
     public void init(GameContainer gameContainer) throws SlickException {
         this.rectangle = new Rectangle(100, 100, 5);
-        this.circle = new Circle(100,100,5);
+        this.circle = new Circle(100,100,5,100);
         this.oval = new Oval(100,70,5);
         this.text = new Text("Hallo Dies ist ein Cooles Spiel",80,90);
     }
