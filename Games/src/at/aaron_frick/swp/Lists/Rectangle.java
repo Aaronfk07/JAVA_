@@ -2,7 +2,7 @@ package at.aaron_frick.swp.Lists;
 
 import org.newdawn.slick.Graphics;
 
-public class Rectangle {
+public class Rectangle implements Actor {
 
     private Direction direction = Direction.RIGHT;
 

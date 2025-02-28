@@ -10,8 +10,8 @@ import java.util.Random;
 public class Lists extends BasicGame {
 
 
-    private List<Rectangle> rectangles;
-    private List<Circle> circles;
+    private List<Actor> actors;
+
 
     public Lists(String title) {
         super(title);
@@ -30,39 +30,34 @@ public class Lists extends BasicGame {
     @Override
     public void init(GameContainer gameContainer) throws SlickException {
 
-        this.rectangles = new ArrayList<>();
-        this.circles = new ArrayList<>();
+        this.actors = new ArrayList<>();
 
         Random random = new Random();
         for (int i = 0; i < 100; i++) {
             Rectangle rectangle = new Rectangle(random.nextInt(500), random.nextInt(500), random.nextInt(50));
-            rectangles.add(rectangle);
+            this.actors.add(rectangle);
         }
         for (int i = 0; i < 50; i++) {
             Circle circle = new Circle();
-            this.circles.add(circle);
+            this.actors.add(circle);
         }
-
+        for (int i = 0; i < 5; i++) {
+            Elipse elipse = new Elipse(random.nextInt(700), random.nextInt(600), random.nextInt(20));
+            this.actors.add(elipse);
+        }
     }
 
     @Override
     public void update(GameContainer gameContainer, int delta) throws SlickException {
-        for (Rectangle rectangle : this.rectangles) {
-            rectangle.update(delta);
-        }
-        for (Circle circle : this.circles) {
-            circle.update(delta);
+        for (Actor actor : this.actors) {
+            actor.update(delta);
         }
     }
 
     @Override
     public void render(GameContainer gameContainer, Graphics graphics) throws SlickException {
-        for (Rectangle rectangle : this.rectangles) {
-            rectangle.render(graphics);
-        }
-
-        for (Circle circle : this.circles) {
-            circle.render((graphics));
+        for (Actor actor : this.actors) {
+            actor.render(graphics);
         }
 
     }
